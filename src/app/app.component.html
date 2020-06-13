@@ -2,7 +2,7 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
-              <ion-header>
+        <ion-header>
           <ion-item class="transparent ion-text-center" lines="none">
             <ion-label class="ion-text-left ion-padding-top">
                 <h1 class="text-size-xl text-color-light ion-text-wrap">Atom Ionic 6 Freebie Theme</h1>
@@ -15,11 +15,11 @@
               </ion-button>
             </ion-label>
           </ion-item>
-      </ion-header>
+        </ion-header>
 
         <ion-list id="inbox-list">
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item lines="none" class="transparent" (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+          <ion-menu-toggle auto-hide="false">
+            <ion-item *ngFor="let p of appPages; let i = index" lines="none" class="transparent" (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
               <ion-label>
                <p class="text-size-md font-regular text-color-light">{{ p.title }}</p>
              </ion-label>
